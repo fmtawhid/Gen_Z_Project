@@ -1,0 +1,27 @@
+{% extends 'base/core.html' %}
+{% load static %}
+
+{% block title %} Course Page {% endblock %}
+
+{% block body %}
+
+    <!-- Registration Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <p class="section-title pr-5"><span class="pr-2">Discription</span></p>
+                    <h1 class="mb-4">{{ course.title }}</h1>
+                    <p>{{ course.description }}</p>
+                    <a href="{% url 'booking' %}" class="btn btn-primary mt-4 py-2 px-4">Addmition Now</a>
+                </div>
+                <div class="col-lg-5">
+                    <img class="card-img-top mb-2" src="{{ course.image.url }}" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+{% endblock %}
